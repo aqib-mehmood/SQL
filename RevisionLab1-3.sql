@@ -1,0 +1,28 @@
+--Revision Lab 1-3
+--Note : Remove comment before execution.
+--Lab 01
+--select * from [Order Details]
+--select OrderID,ProductID,UnitPrice from [Order Details]
+--select FirstName,Title from Employees where FirstName= 'Nancy'
+--select UnitPrice*Quantity as total_Price from [Order Details]
+--select distinct city from Employees
+--select FirstName from Employees where FirstName like '%an%'
+--select * from [Order Details] where UnitPrice between 30 and 40
+--select * from Employees where City in('London' , 'Seattle')
+--select Address from Employees where Address like '___[0-9]%'
+--select Address from Employees where Address like '%[^Rd.]'
+--select * from Products where UnitPrice between 10 and  15 and QuantityPerUnit like '%bottles'
+
+--Lab 02
+--select FirstName from Employees order by  FirstName asc
+--select CategoryID,max(UnitPrice) as high, min(UnitPrice) as low, sum(UnitPrice) as summ, AVG(UnitPrice) as averg from Products group by CategoryID
+--select CategoryID,max(UnitPrice) as high, min(UnitPrice) as low, sum(UnitPrice) as summ, AVG(UnitPrice) as averg from Products group by CategoryID having max(UnitPrice) between 50 and 100
+--select COUNT(CustomerID) as No_of_cust,Region from Customers group by Region having Region is not null
+--select COUNT(ContactName) as No_of_contact,ContactTitle from Customers group by ContactTitle order by ContactTitle desc
+--select count(OrderID) as no_of_order,ProductID from [Order Details] group by ProductID having count(OrderID) > 50
+--select count(Address),city from Employees group by city having COUNT(Address) > 1
+--select count(Address),City from Employees group by City having count(Address)>=2
+
+--Lab 03
+--select Orders.OrderID,Customers.CompanyName  from Orders inner join Customers on Customers.CustomerID = Orders.CustomerID
+--select p.ProductName,c.CategoryName from Products p right join Categories c on c.CategoryID=p.CategoryID where c.CategoryName like 'B%'
